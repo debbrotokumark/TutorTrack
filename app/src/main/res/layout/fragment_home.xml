@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Views.Fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/c1"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10sp"
+            android:layout_toStartOf="@+id/imgmanu"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgmanu"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/more_vert_24" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:src="@drawable/banner" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/c1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/roboto"
+                android:lineSpacingExtra="4dp"
+                android:paddingHorizontal="20dp"
+                android:text="@string/des"
+                android:textAlignment="center"
+                android:textColor="@color/ash"
+                android:textSize="15sp"
+            />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/txTionseemore"
+                    android:fontFamily="@font/roboto"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/lastTuation"
+                    android:textColor="@color/pink"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txTionseemore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/seeMore"
+                    android:textColor="@color/pink"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTuation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                app:cardMaxElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgTution"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:importantForAccessibility="no"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icman" />
+
+                    <TextView
+                        android:id="@+id/txttutionname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/imgTution"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/notosans"
+                        android:maxLines="1"
+                        android:text="@string/loading"
+                        android:textColor="@color/c1"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/txttutionname"
+                        android:layout_toEndOf="@+id/imgTution"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white">
+
+
+                            <ImageView
+                                android:id="@+id/imgCls1"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginEnd="3dp"
+                                android:importantForAccessibility="no"
+                                android:padding="4dp"
+                                android:src="@drawable/icclass" />
+
+                            <TextView
+                                android:id="@+id/txtCls1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/imgCls1"
+                                android:fontFamily="@font/notosans"
+                                android:text="@string/strClass"
+                                android:textColor="@color/ash"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/txtClaas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtCls1"
+                                android:layout_marginBottom="8dp"
+                                android:layout_toEndOf="@+id/imgCls1"
+                                android:fontFamily="@font/notosans"
+                                android:maxLines="1"
+                                android:text="@string/loading"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imgBook1"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_below="@+id/txtClaas"
+                                android:layout_marginEnd="3dp"
+                                android:importantForAccessibility="no"
+                                android:padding="4dp"
+                                android:src="@drawable/icbook" />
+
+                            <TextView
+                                android:id="@+id/txSub1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtClaas"
+                                android:layout_toEndOf="@+id/imgBook1"
+                                android:fontFamily="@font/notosans"
+                                android:text="@string/subjects"
+                                android:textColor="@color/ash"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/txSubject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txSub1"
+                                android:layout_toEndOf="@+id/imgBook1"
+                                android:fontFamily="@font/notosans"
+                                android:maxLines="1"
+                                android:text="@string/loading"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white">
+
+
+                            <ImageView
+                                android:id="@+id/imgLocation1"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginEnd="3dp"
+                                android:importantForAccessibility="no"
+                                android:padding="4dp"
+                                android:src="@drawable/location" />
+
+                            <TextView
+                                android:id="@+id/txtLoca1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/imgLocation1"
+                                android:fontFamily="@font/notosans"
+                                android:text="@string/strLocation"
+                                android:textColor="@color/ash"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/txtuLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtLoca1"
+                                android:layout_marginBottom="8dp"
+                                android:layout_toEndOf="@+id/imgLocation1"
+                                android:fontFamily="@font/notosans"
+                                android:maxLines="1"
+                                android:text="@string/loading"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imgSalary"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_below="@+id/txtuLocation"
+                                android:layout_marginEnd="3dp"
+                                android:importantForAccessibility="no"
+                                android:padding="4dp"
+                                android:src="@drawable/ictaka" />
+
+                            <TextView
+                                android:id="@+id/txtSalery1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtuLocation"
+                                android:layout_toEndOf="@+id/imgSalary"
+                                android:fontFamily="@font/notosans"
+                                android:text="@string/salary"
+                                android:textColor="@color/ash"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/txtSalery"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtSalery1"
+                                android:layout_toEndOf="@+id/imgSalary"
+                                android:fontFamily="@font/notosans"
+                                android:maxLines="1"
+                                android:text="@string/loading"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/txTeacherseemore"
+                    android:fontFamily="@font/roboto"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/lastTutor"
+                    android:textColor="@color/pink"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txTeacherseemore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/seeMore"
+                    android:textColor="@color/pink"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTuator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                app:cardMaxElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgTecherPro"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:importantForAccessibility="no"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icteacher" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/imgTecherPro">
+
+                        <TextView
+                            android:id="@+id/txtTeacherNam"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/notosans"
+                            android:maxLines="1"
+                            android:text="@string/loading"
+                            android:textColor="@color/c1"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <ImageView
+                            android:id="@+id/imgcls2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/txtTeacherNam"
+                            android:layout_marginEnd="3dp"
+                            android:importantForAccessibility="no"
+                            android:padding="4dp"
+                            android:src="@drawable/icclass" />
+
+                        <TextView
+                            android:id="@+id/tctcls2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtTeacherNam"
+                            android:layout_toEndOf="@+id/imgcls2"
+                            android:fontFamily="@font/notosans"
+                            android:gravity="center_vertical"
+                            android:text="@string/strEducation"
+                            android:textColor="@color/ash"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+
+
+                        <TextView
+                            android:id="@+id/txtTechercls"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tctcls2"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toEndOf="@+id/imgcls2"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/notosans"
+                            android:maxLines="1"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/txtTechercls"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white">
+
+
+                                <ImageView
+                                    android:id="@+id/imgLocation2"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:importantForAccessibility="no"
+                                    android:padding="4dp"
+                                    android:src="@drawable/location" />
+
+                                <TextView
+                                    android:id="@+id/txtcl3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@+id/imgLocation2"
+                                    android:fontFamily="@font/notosans"
+                                    android:text="@string/strLocation"
+                                    android:textColor="@color/ash"
+                                    android:textSize="10sp"
+                                    tools:ignore="SmallSp" />
+
+                                <TextView
+                                    android:id="@+id/TecLoc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtcl3"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_toEndOf="@+id/imgLocation2"
+                                    android:fontFamily="@font/notosans"
+                                    android:maxLines="1"
+                                    android:text="@string/loading"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/white">
+
+
+                                <ImageView
+                                    android:id="@+id/imgBook"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:importantForAccessibility="no"
+                                    android:padding="4dp"
+                                    android:src="@drawable/icbook" />
+
+                                <TextView
+                                    android:id="@+id/txtcl4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@+id/imgBook"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/notosans"
+                                    android:maxLines="1"
+                                    android:text="@string/subjects"
+                                    android:textColor="@color/ash"
+                                    android:textSize="10sp"
+                                    tools:ignore="SmallSp" />
+
+                                <TextView
+                                    android:id="@+id/txtTeacherSub"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtcl4"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_toEndOf="@+id/imgBook"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/notosans"
+                                    android:maxLines="1"
+                                    android:text="@string/loading"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

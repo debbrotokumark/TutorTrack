@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="c1">#9D00BF</color>
+    <color name="c2">#C16AD5</color>
+    <color name="c3">#F2B8FF</color>
+    <color name="ash">#4E4E4E</color>
+    <color name="pink">#E91E63</color>
+    <color name="light_ash">#4DC8C8C8</color>
+
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.CALL_PHONE"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TutorTrack"
+        tools:targetApi="34">
+        <activity
+            android:name=".Views.Activity.DeletePostActivity"
+            android:exported="false"
+            android:screenOrientation="locked"
+
+            />
+        <activity
+            android:name=".Views.Activity.TuationPost"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="locked"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Activity.TutorPost"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="locked"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Activity.TutorActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="locked"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Activity.TuationActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="locked"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Activity.HomeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="locked"
+            tools:ignore="DiscouragedApi" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="locked"
+            tools:ignore="DiscouragedApi">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".Utility.NetworkChangeListener"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
